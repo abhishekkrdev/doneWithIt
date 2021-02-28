@@ -29,8 +29,8 @@ const AccountScreen = () => {
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Mosh Hamedani"
-          subTitle="mosh@gmail.com"
+          title="Abhishek Kumar"
+          subTitle="abhi@gmail.com"
           image={require("../assets/mosh.jpg")}
         />
       </View>
