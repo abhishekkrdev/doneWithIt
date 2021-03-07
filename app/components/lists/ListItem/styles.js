@@ -3,13 +3,15 @@ import colors from "../../../config/colors";
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     flexDirection: "row",
     padding: 15,
     backgroundColor: colors.white
   },
   detailsContainer: {
     marginLeft: 10,
-    justifyContent: "center"
+    justifyContent: "center",
+    flex: 1
   },
   image: {
     width: 70,

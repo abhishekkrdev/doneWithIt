@@ -37,8 +37,14 @@ const ListingEditScreen = () => {
         validationSchema={validationSchema}
       >
         <FormField maxLength={255} name="title" placeholder="Title" />
-        <FormField keyboardType="numeric" maxLength={8} name="price" placeholder="Price" />
-        <Picker items={categories} name="category" placeholder="Category" />
+        <FormField
+          keyboardType="numeric"
+          maxLength={8}
+          name="price"
+          placeholder="Price"
+          width={100}
+        />
+        <Picker items={categories} name="category" placeholder="Category" width={200} />
         <FormField
           maxLength={255}
           multiline

@@ -4,8 +4,8 @@ import styles from "./styles";
 
 const Screen = ({ children, style }) => {
   return (
-    <SafeAreaView style={[styles.screen]}>
-      <View style={style}>{children}</View>
+    <SafeAreaView style={[styles.screen, style]}>
+      <View style={[styles.view, style]}>{children}</View>
     </SafeAreaView>
   );
 };
