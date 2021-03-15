@@ -3,15 +3,18 @@ import { StyleSheet, Image, View } from "react-native";
 
 import ListItem from "../components/lists/ListItem";
 import AppText from "../components/AppText";
+import Screen from "../components/Screen/Screen";
 import colors from "../config/colors";
 
-const ListingDetailsScreen = () => {
+const ListingDetailsScreen = ({ route }) => {
+  const listing = route.params;
+  console.log(listing);
   return (
-    <View>
-      <Image source={require("../assets/jacket.jpg")} style={styles.image} />
+    <Screen>
+      {/* <Image source={require(listing.image)} style={styles.image} /> */}
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>Red Jacket For Sale</AppText>
-        <AppText style={styles.price}>$100</AppText>
+        <AppText style={styles.title}>{listing.title}</AppText>
+        <AppText style={styles.price}>${listing.price}</AppText>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/mosh.jpg")}
@@ -20,7 +23,7 @@ const ListingDetailsScreen = () => {
           />
         </View>
       </View>
-    </View>
+    </Screen>
   );
 };
 
