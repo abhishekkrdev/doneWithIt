@@ -8,10 +8,9 @@ import colors from "../config/colors";
 
 const ListingDetailsScreen = ({ route }) => {
   const listing = route.params;
-  console.log(listing);
   return (
     <Screen>
-      {/* <Image source={require(listing.image)} style={styles.image} /> */}
+      <Image source={{ uri: listing.images[0].url }} style={styles.image} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>{listing.title}</AppText>
         <AppText style={styles.price}>${listing.price}</AppText>
